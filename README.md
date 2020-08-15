@@ -1,6 +1,10 @@
 # Chrome-Extension-Word-Replacer
 A custom chrome extension that allows user to input a word and its replacement and will automatically replace every instance on every website.
 
+## Examples
+
+![Image of Example Word Replacements](https://octodex.github.com/images/yaktocat.png)
+
 ## Installation Instructions
   1. Download this repo as a [ZIP file](https://github.com/khi48/Chrome-Extension-Word-Replacer/archive/master.zip) from GitHub.
   2. Unzip the file and you should have a folder named Chrome-Extension-Word-Replacer-master.
