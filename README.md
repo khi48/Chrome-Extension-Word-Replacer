@@ -5,6 +5,12 @@ A custom chrome extension that allows user to input a word and its replacement a
 
 ![Image of Example Word Replacements](https://github.com/khi48/Chrome-Extension-Word-Replacer/blob/master/images/wordReplacementExamples.jpg)
 
+
+### Changing Clouds to Butts
+A classic word replacing example, linked [here](https://chrome.google.com/webstore/detail/cloud-to-butt-plus/apmlngnhgbnjpajelfkmabhkfapgnoai?hl=en)
+![Image of website replacing cloud to butt](https://github.com/khi48/Chrome-Extension-Word-Replacer/blob/master/images/after.jpg)
+
+
 ## Installation Instructions
   1. Download this repo as a [ZIP file](https://github.com/khi48/Chrome-Extension-Word-Replacer/archive/master.zip) from GitHub.
   2. Unzip the file and you should have a folder named Chrome-Extension-Word-Replacer-master.
