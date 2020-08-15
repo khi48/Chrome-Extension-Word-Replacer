@@ -3,7 +3,7 @@ A custom chrome extension that allows user to input a word and its replacement a
 
 ## Examples
 
-![Image of Example Word Replacements](https://octodex.github.com/images/yaktocat.png)
+![Image of Example Word Replacements](https://github.com/khi48/Chrome-Extension-Word-Replacer/blob/master/images/wordReplacementExamples.jpg)
 
 ## Installation Instructions
   1. Download this repo as a [ZIP file](https://github.com/khi48/Chrome-Extension-Word-Replacer/archive/master.zip) from GitHub.
