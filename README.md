@@ -7,8 +7,9 @@ A custom chrome extension that allows user to input a word and its replacement a
 
 
 ### Changing Clouds to Butts
-A classic word replacing example, linked [here](https://chrome.google.com/webstore/detail/cloud-to-butt-plus/apmlngnhgbnjpajelfkmabhkfapgnoai?hl=en)
-![Image of website replacing cloud to butt](https://github.com/khi48/Chrome-Extension-Word-Replacer/blob/master/images/after.jpg)
+A classic word replacing example, linked [here](https://chrome.google.com/webstore/detail/cloud-to-butt-plus/apmlngnhgbnjpajelfkmabhkfapgnoai?hl=en).
+
+![Image of website replacing cloud to butt](https://github.com/khi48/Chrome-Extension-Word-Replacer/blob/master/images/after.png)
 
 
 ## Installation Instructions
