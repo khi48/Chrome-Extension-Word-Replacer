@@ -5,26 +5,28 @@
 
 chrome.runtime.onMessage.addListener(gotMessage);
 
-
+// Function saves users original word and replacement word so it can be used in the
+// next session
 function saveToLocal(original_word, replacement_word) {
-  // console.log('saving to local');
-  chrome.storage.local.get({words: []}, function (result) {
-    // the input argument is ALWAYS an object containing the queried keys
-    // so we select the key we need
-    let words_list = result.words;
-    words_list.push({original: original_word, replacement: replacement_word});
-    // set the new array value to the same key
-    chrome.storage.local.set({words: words_list}, function () {
-        // you can use strings instead of objects
-        // if you don't  want to define default values
 
-        // chrome.storage.local.get('words', function (result) {
-        //     console.log(result.words);
-        // });
+  chrome.storage.local.get({words: []}, function (result) {
+    
+    // get list of exising word pairs (originals and replacement)
+    let words_list = result.words;
+
+    // add new word pair to list
+    words_list.push({original: original_word, replacement: replacement_word});
+
+    // overwrite old array in memeory, and save it as new one, with new pair appended
+    chrome.storage.local.set({words: words_list}, function () {
+        console.log('save successful')
     });
   });
 }
 
+
+// Replaces all the origional words on the current site with the original and saves the
+// word pair for later
 function replaceAndSaveWord(original, replacement){
   console.log('Replacing "' + original + '" to "' + replacement + '"');
 
@@ -35,8 +37,10 @@ function replaceAndSaveWord(original, replacement){
 
 }
 
+// Recieve message from popup (user interaction)
 function gotMessage(message, sender, sendResponse){
 
+    // check if message is to add a new word replacement pair, or remove all words
     if (message.d == "replace") {
       replaceAndSaveWord(message.original, message.replacement)
     } else if (message.d == "clear") {
@@ -44,9 +48,8 @@ function gotMessage(message, sender, sendResponse){
     }
 }
 
-
+// Checks entire document DOM and replaces all orignal words with their replacements
 const replaceOnDocument = (pattern, string, {target = document.body} = {}) => {
-  // Handle `string` — see the last section
   [
     target,
     ...target.querySelectorAll("*:not(script):not(noscript):not(style)")
@@ -55,6 +58,9 @@ const replaceOnDocument = (pattern, string, {target = document.body} = {}) => {
     .forEach((textNode) => textNode.textContent = textNode.textContent.replace(pattern, string)));
 };
 
+
+// Modifies origional word and replacement to account for capital, upper case, lower case and 
+// user input cases. 
 function replaceWord(original, replacement) {
   // replacing word as user input
   replaceOnDocument(new RegExp("\\b"+original+"\\b","g"), replacement);
@@ -77,6 +83,7 @@ function replaceWord(original, replacement) {
   
 }
 
+// Goes through list of stored replacement word pairs and makes the replacements
 function replaceWordsOnStartUp() {
 
   chrome.storage.local.get('words', function (result) {
@@ -98,6 +105,8 @@ function replaceWordsOnStartUp() {
 
 replaceWordsOnStartUp();
 
+
+// Clears all the replacements word pairs from memory
 function clearReplacements(){
   console.log('Clearing')
   chrome.storage.local.clear(function(){

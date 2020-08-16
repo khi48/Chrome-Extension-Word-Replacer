@@ -1,10 +1,11 @@
+// Add callback functions for when submit buttons are clicked
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("replacement-submit").addEventListener("click", updateText);
     document.getElementById("clear-replacements").addEventListener("click", clearReplacements);
 });
 
 
-
+// Sends message to content script to add new replacement word pair and update the text accordingly
 function updateText() {
     console.log('replace words')
     chrome.tabs.query({currentWindow: true, active: true}, function (tabs){
@@ -18,8 +19,8 @@ function updateText() {
     });
 }
 
+// Sends message to content script to add clear all replacement word pairs
 function clearReplacements(){
-    // need to send message to content.js.
     console.log('clear replacements');
     chrome.tabs.query({currentWindow: true, active: true}, function (tabs){
         let activeTab = tabs[0];
