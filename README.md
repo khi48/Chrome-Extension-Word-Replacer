@@ -3,11 +3,14 @@ A custom chrome extension that allows user to input a word and its replacement a
 
 ## Examples
 
-  ### Substitutions
-![Image of Example Word Replacements](https://github.com/khi48/Chrome-Extension-Word-Replacer/blob/master/images/wordReplacementExamples.jpg)
+### Possible Substitutions
+Example Subsitutions to make:
+<p align="center">
+   <img src="https://github.com/khi48/Chrome-Extension-Word-Replacer/blob/master/images/wordReplacementExamples.jpg" alt="Image of Example Word Replacements">
+ </p>
 
 
-  ### Changing Clouds to Butts
+### Clouds to Butts
 A classic word replacing example, idea from other project, linked [here](https://chrome.google.com/webstore/detail/cloud-to-butt-plus/apmlngnhgbnjpajelfkmabhkfapgnoai?hl=en).
 
 ![Image of website replacing cloud to butt](https://github.com/khi48/Chrome-Extension-Word-Replacer/blob/master/images/after.png)
